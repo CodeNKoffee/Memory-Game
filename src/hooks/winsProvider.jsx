@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { WinsContext } from './WinsContext';
+import { WinsContext } from './winsContext';
 
 export const WinsProvider = ({ children }) => {
   const [wins, setWins] = useState(0);

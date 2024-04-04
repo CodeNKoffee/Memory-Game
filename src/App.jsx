@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Card from './components/Card';
 import Header from './components/Header';
 import useAppBadge from './hooks/useAppBadge';
 import shuffle from './utilities/shuffle';
+import { WinsContext } from './hooks/winsContext';
 
 function App() {
-  const [wins, setWins] = useState(0); // Win streak
+  // const [wins, setWins] = useState(0); // Win streak
+  const [wins, setWins] = useContext(WinsContext);
   const [cards, setCards] = useState(shuffle); // Cards array from assets
   const [pickOne, setPickOne] = useState(null); // First selection
   const [pickTwo, setPickTwo] = useState(null); // Second selection
